@@ -1,13 +1,22 @@
 
 import React, { Component } from 'react';
 import './Movie.css'
+import PropTypes from 'prop-types';
+
+
 
 class Movie extends Component{
+
+    static propTypes = {
+        title : PropTypes.string,
+        poster : PropTypes.string
+    }
+
     render(){
         return (
         <div>
-            <MoviePoster />
-           <h1>Hello This is a movie</h1>
+            <MoviePoster poster ={this.props.poster}/>
+           <h1>{this.props.title}</h1>
         </div>
         )
     }
@@ -16,7 +25,7 @@ class Movie extends Component{
 class MoviePoster extends Component{
     render(){
         return(
-            <img src="https://www.gateway978.com/wordpress/wp-content/uploads/2017/01/la-la-land-865x433.jpg"/>
+            <img src= {this.props.poster }/>
         )
     }
 }
