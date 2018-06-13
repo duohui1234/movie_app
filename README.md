@@ -1,4 +1,4 @@
-#### movie app clone coding
+## Movie App Clone Coding
 
  Source for React JS Fundamentals Course on Nomad Academy
 
